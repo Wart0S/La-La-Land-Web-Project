@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* smooth scroll eklendi */
+}
+
+.container {
+    background: url(Image/526176-3840x2160-desktop-4k-ryan-gosling-la-la-land-wallpaper-photo.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: #ffffff; 
+    font-family: 'Momo Trust Display', sans-serif;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    background: rgba(44, 62, 80, 0.95);
+    position: relative;
+    z-index: 2; 
+}
+
+.navbar .logo {
+    display: inline-block;
+    margin-left: 90px;
+}
+
+.navbar .logo img {
+    position: relative;
+    top: -85px; 
+    width: 50%;
+    margin-top: 0px; 
+}
+
+.navbar ul {
+    float: right;
+    margin-right: 40px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    line-height: 4;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(255, 215, 0);
+    font-size: 20px;
+    padding: 6px 13px;
+    font-family: inherit; 
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover {
+    background-color: #3a0644;
+    border-radius: 5px;
+}
+
+.container .center {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; 
+    text-align: center;
+}
+
+.container .center h1 {
+    font-size: 80px; 
+    color: rgb(255, 255, 255); 
+    line-height: 1;
+    width: 100%;
+}
+
+.container .center h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    letter-spacing: 5px;
+    font-weight: 400;
+    color: rgb(255, 215, 0); 
+}
+
+.film-konusu,
+.oyuncular,
+.degerlendirme,
+.hakkinda,
+.muzik,
+.izleme-linkleri {
+    width: 80%;
+    margin: 300px auto 50px;  
+    color: #3a0644;
+    font-family: 'Momo Trust Display', sans-serif;
+    text-align: left;
+}
+
+.film-konusu h2,
+.oyuncular h2,
+.degerlendirme h2,
+.hakkinda h2,
+.muzik h2,
+.izleme-linkleri h2 {
+    font-size: 2rem;
+    color: #eef105;
+    text-transform: uppercase;
+    margin-top: 110px;   
+    margin-bottom: 170px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.film-konusu h2{
+    font-size: 2rem;
+    color: #eef105;
+    text-transform: uppercase;
+    margin-top: 140px;   
+    margin-bottom: 300px; 
+    margin-right: 10px;
+}
+
+.film-konusu {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    padding: 50px 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Image/33118-2076x1172-desktop-hd-la-la-land-wallpaper-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.film-konusu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.film-konusu h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.film-konusu p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    text-align: center;
+    color: #fff;
+}
+
+.oyuncular {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    padding: 50px 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Image/sky.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.oyuncular::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.oyuncular h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.oyuncular p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    text-align: center;
+    color: #fff;
+}
+
+.degerlendirme {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    padding: 50px 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Image/126194-2048x1361-desktop-hd-la-la-land-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.degerlendirme::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.degerlendirme h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.degerlendirme p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    text-align: center;
+    color: #fff;
+}
+
+.muzik {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    padding: 50px 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Image/125575-3200x2128-desktop-hd-la-la-land-wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.muzik::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.muzik h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.muzik p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    text-align: center;
+    color: #fff;
+}
+
+.izleme-linkleri {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    padding: 50px 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Image/Adsız tasarım.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.izleme-linkleri::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.izleme-linkleri h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.izleme-linkleri p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    text-align: center;
+    color: #fff;
+}
+
+.platforms {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.platform-logo {
+    width: 100px;          
+    transition: transform 0.3s ease;
+}
+
+.platform-logo:hover {
+    transform: scale(1.1); 
+}
+
+.film-konusu + .oyuncular::after,
+.oyuncular + .degerlendirme::after,
+.degerlendirme + .muzik::after,
+.muzik + .izleme-linkleri::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    z-index: 2;
+}
