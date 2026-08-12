@@ -10,43 +10,55 @@ html {
     scroll-behavior: smooth;
 }
 
+.container {
+    background: url('Image/526176-3840x2160-desktop-4k-ryan-gosling-la-la-land-wallpaper-photo.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: #ffffff;
+    font-family: 'Momo Trust Display', sans-serif;
+}
 
+.container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* NAVBAR TAMAMEN DÜZELTİLDİ VE ORTALANDI */
 .navbar {
     width: 100%;
     height: 80px;
     background: rgba(44, 62, 80, 0.95);
     position: relative;
-    z-index: 2;
-    /* Flexbox ile içindeki elemanları dikeyde ortalıyoruz */
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 50px;
 }
 
-.navbar .logo {
+.navbar .logo a {
     display: flex;
     align-items: center;
 }
 
 .navbar .logo img {
- 
-    height: 50px; 
+    height: 50px;
     width: auto;
     object-fit: contain;
 }
 
 .navbar ul {
-
     display: flex;
     align-items: center;
     gap: 15px;
     list-style: none;
-}
-
-.navbar ul li {
-
-    display: inline-block;
 }
 
 .navbar ul li a {
@@ -62,4 +74,129 @@ html {
 .navbar ul li a:hover {
     background-color: #3a0644;
     border-radius: 5px;
+}
+
+.container .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+}
+
+.container .center h1 {
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    width: 100%;
+}
+
+.container .center h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    letter-spacing: 5px;
+    font-weight: 400;
+    color: rgb(255, 215, 0);
+}
+
+.film-konusu,
+.oyuncular,
+.degerlendirme,
+.muzik,
+.izleme-linkleri {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    padding: 50px 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-family: 'Momo Trust Display', sans-serif;
+}
+
+.film-konusu { background-image: url('Image/33118-2076x1172-desktop-hd-la-la-land-wallpaper-image.jpg'); }
+.oyuncular { background-image: url('Image/sky.png'); }
+.degerlendirme { background-image: url('Image/126194-2048x1361-desktop-hd-la-la-land-background-image.jpg'); }
+.muzik { background-image: url('Image/125575-3200x2128-desktop-hd-la-la-land-wallpaper.jpg'); }
+.izleme-linkleri { background-image: url('Image/Adsız tasarım.png'); }
+
+.film-konusu::before,
+.oyuncular::before,
+.degerlendirme::before,
+.muzik::before,
+.izleme-linkleri::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.film-konusu h2,
+.oyuncular h2,
+.degerlendirme h2,
+.muzik h2,
+.izleme-linkleri h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #eef105;
+}
+
+.film-konusu p,
+.oyuncular p,
+.degerlendirme p,
+.muzik p,
+.izleme-linkleri p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    text-align: center;
+    color: #fff;
+}
+
+.platforms {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.platform-logo {
+    width: 100px;
+    transition: transform 0.3s ease;
+}
+
+.platform-logo:hover {
+    transform: scale(1.1);
+}
+
+.film-konusu + .oyuncular::after,
+.oyuncular + .degerlendirme::after,
+.degerlendirme + .muzik::after,
+.muzik + .izleme-linkleri::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    z-index: 2;
 }
