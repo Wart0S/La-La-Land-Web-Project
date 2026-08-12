@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
 
-/* Evrensel sıfırlama (Baştaki eksik * eklendi) */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* YENİLENMİŞ NAVBAR KODLARI */
+
 .navbar {
     width: 100%;
     height: 80px;
@@ -31,22 +30,22 @@ html {
 }
 
 .navbar .logo img {
-    /* Eski hatalı top ve margin değerleri temizlendi */
+ 
     height: 50px; 
     width: auto;
     object-fit: contain;
 }
 
 .navbar ul {
-    /* float ve margin-right kaldırıldı */
+
     display: flex;
     align-items: center;
-    gap: 15px; /* Menü elemanları arasındaki boşluk */
+    gap: 15px;
     list-style: none;
 }
 
 .navbar ul li {
-    /* line-height: 4 kaldırıldı */
+
     display: inline-block;
 }
 
