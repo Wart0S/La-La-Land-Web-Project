@@ -49,8 +49,9 @@ html {
 }
 
 .navbar .logo img {
-    height: 50px;
+    height: 160px;
     width: auto;
+    max-height: 75px;
     object-fit: contain;
 }
 
